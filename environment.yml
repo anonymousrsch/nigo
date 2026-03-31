@@ -1,0 +1,30 @@
+name: turbo_nigo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13.11
+  - pip=25.3
+  - vc=14.3
+  - vc14_runtime=14.44.35208
+  - vs2015_runtime=14.44.35208
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu130
+      - torch==2.11.0+cu130
+      - torchvision==0.26.0+cu130
+      - numpy==2.3.5
+      - scipy==1.17.1
+      - h5py==3.15.1
+      - matplotlib==3.10.8
+      - seaborn==0.13.2
+      - pandas==2.3.3
+      - scikit-learn==1.8.0
+      - tqdm==4.67.1
+      - pyyaml==6.0.3
+      - wandb==0.25.0
+      - pytest==9.0.2
+variables:
+  # Prevents conflicts between Intel MKL and conda-forge OpenMP
+  KMP_DUPLICATE_LIB_OK: "TRUE"
+  # Reduces overhead of PyTorch compiled graphs if Triton is available
+  TORCH_COMPILE_DISABLE: "0"

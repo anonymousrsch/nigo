@@ -1,0 +1,15 @@
+numpy==2.3.5
+scipy==1.17.0
+h5py==3.15.1
+matplotlib==3.10.8
+seaborn==0.13.2
+pandas==2.3.3
+scikit-learn==1.8.0
+tqdm==4.67.1
+pyyaml==6.0.3
+wandb==0.25.0
+pytest==9.0.2
+
+# NOTE ON PYTORCH:
+# PyTorch 2.10 + CUDA 13.0 requires explicitly installing via index:
+# pip install torch==2.10.0+cu130 torchvision==0.25.0+cu130 --extra-index-url https://download.pytorch.org/whl/cu130
